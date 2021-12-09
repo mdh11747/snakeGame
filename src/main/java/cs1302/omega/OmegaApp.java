@@ -1,6 +1,6 @@
 package cs1302.omega;
 
-import cs1302.game.DemoGame;
+import cs1302.game.Snake;
 
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -27,21 +27,21 @@ public class OmegaApp extends Application {
     public void start(Stage stage) {
 
         // demonstrate how to load local asset using "file:resources/"
-        Image bannerImage = new Image("file:resources/readme-banner.png");
-        ImageView banner = new ImageView(bannerImage);
-        banner.setPreserveRatio(true);
-        banner.setFitWidth(640);
+//        Image bannerImage = new Image("file:resources/readme-banner.png");
+//        ImageView banner = new ImageView(bannerImage);
+//        banner.setPreserveRatio(true);
+//        banner.setFitWidth(640);
 
         // some labels to display information
-        Label notice = new Label("Modify the starter code to suit your needs.");
-        Label instructions
-            = new Label("Move left/right with arrow keys; click rectangle to teleport.");
+//        Label notice = new Label("Modify the starter code to suit your needs.");
+//        Label instructions
+//            = new Label("Move left/right with arrow keys; click rectangle to teleport.");
 
         // demo game provided with the starter code
-        DemoGame game = new DemoGame(640, 240);
+        Snake game = new Snake(640, 640);
 
         // setup scene
-        VBox root = new VBox(banner, notice, instructions, game);
+        VBox root = new VBox(game);
         Scene scene = new Scene(root);
 
         // setup stage
