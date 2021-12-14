@@ -38,17 +38,20 @@ public class OmegaApp extends Application {
 //            = new Label("Move left/right with arrow keys; click rectangle to teleport.");
 
         // demo game provided with the starter code
-        Snake game = new Snake(640, 640);
+        Snake game = new Snake();
 
         // setup scene
         VBox root = new VBox(game);
         Scene scene = new Scene(root);
 
         // setup stage
-        stage.setTitle("OmegaApp!");
+        stage.setTitle("Snake");
         stage.setScene(scene);
         stage.setOnCloseRequest(event -> Platform.exit());
         stage.sizeToScene();
+        stage.setMinHeight(640);
+        stage.setMinWidth(640);
+        stage.setResizable(false);
         stage.show();
 
         // play the game

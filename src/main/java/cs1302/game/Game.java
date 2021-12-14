@@ -33,7 +33,7 @@ public abstract class Game extends Region {
     protected final Logger logger = Logger.getLogger("cs1302.game.Game");
 
     private final Bounds bounds;                     // game bounds
-    private final Duration fpsTarget;                // target duration for game loop
+    private Duration fpsTarget;                // target duration for game loop
     private final Timeline loop = new Timeline();    // timeline for main game loop
     private final BitSet keysPressed = new BitSet(); // set of currently pressed keys
 
@@ -164,5 +164,9 @@ public abstract class Game extends Region {
     public final Bounds getGameBounds() {
         return bounds;
     } // getGameBounds
+
+//    public final int setFps(int fps) {
+//        this.fpsTarget = fps;
+//    } // setFps
 
 } // Game
